@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+ {% block title%}
+  Department
+ {% endblock %}
+ {% load static %}
+ {% block content%}
+ <style>
+    body {
+      background-image:{% static '/images/dep.jpg' %} ;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: 100% 100%;
+    }
+    </style>
+   <Body background={% static '/images/dep.jpg' %}>
+    <div class="mx-auto w-75 bg-light text-center text-white  p-3 my-3 border border-white round">
+ <h1  class="text-center" style="color:blue"><b><i> OUR DEPARTMENTS</i></b> </h1>
+    </div>
+ <hr>
+ {%for d in dept%}
+ <div class="mx-auto w-75 bg-info text-center text-white  p-3 my-3 border border-warning round">
+    <h1 style="color:orange" >
+        {{d.dep_name}}
+    </h1>
+    <p>{{d.dep_description}}</p>
+    <hr>
+</div>   
+{% endfor%}
+ {% endblock %} 

@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+ {% block title%}
+  Doctors
+ {% endblock %}
+ {% block content%}
+ {% load static %}
+
+ <style>
+  body {
+    background-image:{% static '/images/dooc.webp' %} ;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+  }
+  </style>
+ <Body background={% static '/images/dark.jpg' %}>
+ <div class="container bg-danger">
+ <h1  class="text-center" style="color:white" ><b><i> OUR DOCTORS</i></b> </h1>
+ </div>
+ <div class="mx-auto w-30 bg-light text-center text-white  p-3 my-3 border border-warning round">
+    
+ </div>  
+ 
+ </div>
+ 
+ {%for d in Doctor %}
+
+<div class="card text-center mx-3 my-3 " style="width: 18rem; display:inline-block" >
+    <img src="{{d.doc_pic.url}}" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h3 class="card-title">{{d.doc_name}}</h3>
+      <h4 class="card-text"><i>{{d.doc_specilization}}</i></h4>
+      
+    </div>
+  </div>
+</Body>
+  
+{% endfor%}
+ {% endblock %} 

@@ -1,0 +1,6 @@
+li:hover{
+    background-color: greenyellow;
+    border-radius: 5px;
+    box-shadow: inset;
+    border-color: goldenrod;
+}

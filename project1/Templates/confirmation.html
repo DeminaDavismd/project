@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+ {% block title%}
+  Booking Confirmation
+ {% endblock %}
+ {% load static %}
+ {% block content%}
+ <body background={% static '/images/hf.jpg' %}>
+   <style>
+       body {
+           background-image:{% static '/images/hf.jpg' %} ;
+           background-repeat: no-repeat;
+           background-attachment: fixed;
+           background-size: 100% 100%;
+         }
+      </style>     
+ <div class="container text-center">
+ <h1 >Booking Confirmation</h1>
+ <div class="alert alert-info" role="alert">
+
+   <b> we have Recieved your Appointment Request,Our representative will contact you, Thank you.</b>
+ </div>
+ </div>
+</body>
+ {% endblock %} 

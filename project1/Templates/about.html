@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+ {% block title%}
+  About
+ {% endblock %}
+ {% load static %}
+ {% block content%}
+ <h1 style="color:violet">About Page</h1>
+ <body background={% static '/images/cl.jpg' %}>
+    <style>
+        body {
+            background-image:{% static '/images/cl.jpg' %} ;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: 100% 100%;
+          }
+        
+
+        * {
+          box-sizing: border-box;
+        }
+        
+        .column {
+          float: left;
+          width: 46.33%;
+          height:200%
+          padding: 5px;
+        }
+        
+        /* Clearfix (clear floats) */
+        .row::after {
+          content: "";
+          clear: both;
+          display: table;
+        }
+        </style>
+ <div class="row">
+    <div class="column">
+      <img src={% static '/images/hs.jpg' %} alt="hs" style="width:100%">
+    </div>
+    <br>
+    <div class="column">
+      <img src={% static '/images/hos.jpg' %} alt="coridoor" style="width:100%">
+    </div>
+    
+  </div>
+<div class="mx-auto w-100 bg-info p-3 text-center text-white">
+<h5>St.James’ Hospital is a Multi-Super speciality hospital,where a competent team of specialists and super specialists join together with the support of sophisticated technology to deliver high quality medical & health care protection. Our Hospital is equipped with all the latest health-care facilities,it puts to ease the patient’s anxiety relating to their heaith-care requirements.
+</h5>
+</div>
+<br>
+<hr>
+<div class="mx-auto w-100" >
+<img src={% static '/images/vision and mission.PNG' %} class="d-block w-100" style="height:400px !important;" alt="...">
+</div>
+</body>    
+ {% endblock %} 
